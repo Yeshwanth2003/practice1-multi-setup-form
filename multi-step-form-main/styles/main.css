@@ -1,0 +1,482 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+html,
+#body {
+  width: 100%;
+  height: 100%;
+}
+#body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(219, 239, 253, 0.825);
+}
+#overall {
+  width: 60%;
+  height: 75%;
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+}
+#right {
+  height: 100%;
+  width: 60%;
+  /* background-color: red; */
+}
+#lContents {
+  border-radius: 10px;
+  margin: 5%;
+  margin-top: 8%;
+  background: url(./images//bg-sidebar-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90%;
+  width: 82%;
+  padding-top: 5%;
+}
+#menu h2 {
+  font-size: 1.1em;
+}
+#menu h3 {
+  font-size: 0.8em;
+  font-weight: lighter;
+}
+#menu p {
+  font-size: 1em;
+  margin: 0.5em 0.9em;
+  font-weight: bolder;
+}
+.ml {
+  display: flex;
+  margin: 1em 0.7em;
+}
+.ml .md1 {
+  margin: 0.5em;
+  border: 1px solid snow;
+  border-radius: 100px;
+  cursor: pointer;
+}
+.ml .md2 {
+  margin: 0.5em;
+}
+#menu {
+  min-height: min-content;
+  font-size: 1em;
+  color: white;
+}
+#left {
+  height: 100%;
+  width: 35%;
+  border-radius: 10px 0 0 10px;
+}
+
+.isNavActive {
+  background-color: aqua;
+  color: rgb(39, 62, 130);
+  border-color: aqua;
+}
+.goback {
+  cursor: pointer;
+}
+/* .........................Login................................... */
+
+#loginOverall {
+  width: 85%;
+  height: 85%;
+  margin: 7.5% 7.5%;
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  color: rgb(54, 37, 112);
+}
+.logheading:nth-child(1) {
+  font-size: 2.7em;
+  margin: 0.2em 0em 0.1em 0;
+}
+.logheading:nth-child(2) {
+  font-size: 1.2em;
+  color: rgb(153, 151, 151);
+  font-weight: lighter;
+}
+#loginInput {
+  height: 100%;
+  margin-top: 5%;
+}
+#formdiv {
+  margin: 4% 0;
+}
+#formdiv input {
+  width: 90%;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 3%;
+  margin: 1% 0;
+  border-width: 2px;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid rgb(153, 151, 151);
+}
+.input-dis {
+  font-weight: bold;
+}
+.input-container {
+  margin: 4% 0;
+}
+#formdiv input:focus {
+  border-color: royalblue;
+}
+#formbuttondiv {
+  display: flex;
+  justify-content: right;
+}
+#actformbutton {
+  margin: 0 4%;
+}
+#nextButton {
+  background-color: rgb(39, 62, 130);
+  border: none;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  padding: 1em 1.5em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* ***********************************Select your plan ********************************** */
+#selectYourPlanDiv {
+  width: 85%;
+  height: 85%;
+  margin: 7.5% 7.5%;
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  color: rgb(54, 37, 112);
+}
+#plan1Icon {
+  background: url(./images/icon-arcade.svg);
+  background-repeat: no-repeat;
+}
+#plan2Icon {
+  background: url(./images/icon-advanced.svg);
+  background-repeat: no-repeat;
+}
+#plan3Icon {
+  background: url(./images/icon-pro.svg);
+  background-repeat: no-repeat;
+}
+.planIcon {
+  width: 2.5em;
+  height: 2.5em;
+}
+#selMaindiv {
+  height: 55%;
+  padding: 3% 0%;
+  margin-top: 3%;
+}
+#selMaindivinner {
+  height: 65%;
+  display: flex;
+  justify-content: space-between;
+}
+#selMaindivinner label {
+  flex: 1;
+  border-radius: 10px;
+}
+.plans {
+  border: 2px solid royalblue;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 8%;
+  cursor: pointer;
+  height: 100%;
+}
+#selHeader h1 {
+  font-size: 2.6em;
+  margin: 0.2em 0em 0.1em 0;
+}
+#selHeader h3 {
+  font-size: 1.2em;
+  color: rgb(153, 151, 151);
+  font-weight: lighter;
+}
+#planTextDiv h2 {
+  font-size: 1.2em;
+}
+#planTextDiv h4 {
+  font-size: 1em;
+  color: rgb(153, 151, 151);
+  font-weight: lighter;
+}
+#planTextDiv p {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+#selfooter {
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  height: 20%;
+}
+#selfooter div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#selfooter h2 {
+  font-size: 1.2em;
+  color: rgb(153, 151, 151);
+}
+
+#label1:has(+ #input1:checked) div {
+  background-color: rgb(246, 247, 250);
+}
+#label2:has(+ #input2:checked) div {
+  background-color: rgb(246, 247, 250);
+}
+#label3:has(+ #input3:checked) div {
+  background-color: rgb(246, 247, 250);
+}
+
+/* toogle */
+#SetOfToogleButton {
+  display: flex;
+  background-color: rgb(240, 240, 244);
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+#overallToogle {
+  height: 18px;
+  width: 40px;
+  margin: 0 2%;
+  cursor: pointer;
+}
+#lableOne,
+#lableTwo {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+#toogle {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(29, 47, 101);
+  display: flex;
+  justify-content: space-between;
+  padding: 5%;
+  border-radius: 10px;
+}
+
+label[id="forMonthly"] {
+  width: 45%;
+  height: 100%;
+  cursor: pointer;
+}
+label[id="forYearly"] {
+  width: 45%;
+  height: 100%;
+  cursor: pointer;
+}
+label[for="monthly"],
+label[for="yearly"] {
+  cursor: pointer;
+}
+#overallToogle:has(input#monthly:checked) div#monR {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 100%;
+}
+#overallToogle:has(input#yearly:checked) div#yearR {
+  width: 100%;
+  border-radius: 100%;
+  height: 100%;
+  background-color: white;
+}
+/* toogle */
+#Maintoogle {
+  margin-top: 7%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ************************************Addons********************************************* */
+
+#addonsDiv {
+  width: 80%;
+  height: 90%;
+  margin: 7.5% 8%;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  color: rgb(54, 37, 112);
+}
+#addonheader h1 {
+  font-size: 2.7em;
+  margin: 0.2em 0em 0.1em 0;
+}
+#addonheader h3 {
+  font-size: 1.2em;
+  color: rgb(153, 151, 151);
+  font-weight: lighter;
+}
+#addonmain {
+  height: 70%;
+}
+#addoptns {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 7% 0;
+}
+.addonoptns {
+  display: flex;
+  padding: 1em;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1.2em 1em;
+  border: 2px solid royalblue;
+  border-radius: 10px;
+  margin-bottom: 2%;
+}
+#optnInner1 {
+  display: flex;
+  width: 95%;
+  align-items: center;
+}
+#optnInner1 input {
+  width: 20px;
+  height: 20px;
+  margin-right: 10%;
+  outline-color: rgb(153, 151, 151);
+}
+#optnInner1 div h4 {
+  color: rgb(153, 151, 151);
+}
+#optnInner2 {
+  font-size: 0.8em;
+  color: rgb(153, 151, 151);
+}
+#footerContentBox {
+  margin: 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#footerContentBox h2 {
+  font-size: 1.2em;
+  color: rgb(153, 151, 151);
+}
+.addonoptns:has(input[type="checkbox"]:checked) {
+  background-color: rgb(246, 247, 250);
+}
+
+/* ***********************************FinishUp******************************************** */
+
+#finishupdiv {
+  width: 80%;
+  height: 90%;
+  margin: 7.5% 8%;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  color: rgb(54, 37, 112);
+}
+
+#finishupheader h1 {
+  font-size: 2.7em;
+  margin: 0.2em 0em 0.1em 0;
+}
+#finishupheader h3 {
+  font-size: 1.2em;
+  color: rgb(153, 151, 151);
+  font-weight: lighter;
+}
+#finishMain {
+  background-color: rgb(246, 247, 250);
+  max-height: max-content;
+  padding: 2% 0;
+  margin-top: 4%;
+  border-radius: 10px;
+}
+#plantakenDiv {
+  max-height: 50%;
+}
+#addontakenDiv {
+  margin-top: 2%;
+  max-height: 50%;
+}
+
+#ptdiv,
+#atdiv {
+  height: 100%;
+}
+#pdW,
+#adW {
+  display: flex;
+  justify-content: space-around;
+  padding: 1% 0;
+}
+#pd1,
+#pd2 {
+  font-size: 0.9em;
+}
+#ad1 {
+  font-size: 0.7em;
+  font-weight: lighter;
+  color: rgb(153, 151, 151);
+}
+#ad2 {
+  font-size: 0.7em;
+}
+#totaldiv {
+  margin-top: 4%;
+}
+#tot {
+  display: flex;
+  justify-content: space-around;
+}
+#tot1 {
+  font-size: 0.7em;
+  color: rgb(153, 151, 151);
+}
+#tot2 {
+  font-size: 0.9em;
+  color: blue;
+}
+
+/* *********************************Final******************************************** */
+
+#finalDiv {
+  width: 80%;
+  height: 90%;
+  margin: 7.5% 8%;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#finalImg {
+  background: url(./images//icon-thank-you.svg);
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 100px;
+}
+#finalHeading {
+  color: rgb(54, 37, 112);
+  margin: 5%;
+}
+#finalDiv p {
+  font-size: 1.2em;
+  color: rgb(153, 151, 151);
+}

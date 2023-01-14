@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <div id="body">
+      <div id="overall">
+        <div id="left">
+          <div id="lContents">
+            <div id="menu">
+              <div id="m1" class="ml">
+                <div id="m1d1" class="md1 isNavActive">
+                  <div class="nav-button nav1">
+                    <p>1</p>
+                  </div>
+                </div>
+                <div id="m1d2" class="md2">
+                  <h3>STEP 1</h3>
+                  <h2>YOUR INFO</h2>
+                </div>
+              </div>
+              <div id="m2" class="ml">
+                <div id="m2d1" class="md1">
+                  <div class="nav-button nav2">
+                    <p>2</p>
+                  </div>
+                </div>
+                <div id="m2d2" class="md2">
+                  <h3>STEP 2</h3>
+                  <h2>SELECT PLAN</h2>
+                </div>
+              </div>
+              <div id="m3" class="ml">
+                <div id="m3d1" class="md1">
+                  <div class="nav-button nav3">
+                    <p>3</p>
+                  </div>
+                </div>
+                <div id="m3d2" class="md2">
+                  <h3>STEP 3</h3>
+                  <h2>ADD_ONS</h2>
+                </div>
+              </div>
+              <div id="m4" class="ml">
+                <div id="m4d1" class="md1">
+                  <div class="nav-button nav4">
+                    <p>4</p>
+                  </div>
+                </div>
+                <div id="m4d2" class="md2">
+                  <h3>STEP 4</h3>
+                  <h2>SUMMARY</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="right"></div>
+      </div>
+    </div>
+    <!-- Login -->
+    <template id="login">
+      <div id="loginOverall">
+        <header id="logHead">
+          <h1 class="logheading">Personal info</h1>
+          <h3 class="logheading">
+            Please provide your name,email address and phone number
+          </h3>
+        </header>
+        <div id="loginInput">
+          <div id="formdiv">
+            <form action="/login">
+              <div id="namein" class="input-container">
+                <div id="nametext">
+                  <label for="name" class="input-dis">Name</label>
+                </div>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="e.g. Stephen King"
+                  required
+                />
+              </div>
+              <div id="emailin" class="input-container">
+                <div id="emailText">
+                  <label for="email" class="input-dis">Email Address</label>
+                </div>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="e.g. stephenking@lorem.com"
+                  required
+                />
+              </div>
+              <div id="phonein" class="input-container">
+                <div id="phonetext">
+                  <label for="phone" class="input-dis">Phone Number</label>
+                </div>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="e.g. +1 234 567 890"
+                  required
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="formbuttondiv">
+          <div id="actformbutton">
+            <button
+              id="nextButton"
+              class="loginButton nxtbtn"
+              from="login"
+              to="selectplan"
+              onNav="nav2"
+              onclick="nextButtonNav.call(this)"
+            >
+              Next Step
+            </button>
+          </div>
+        </div>
+      </div>
+    </template>
+    <!-- SelectPlan -->
+    <template id="selectYourPlan">
+      <div id="selectYourPlanDiv">
+        <header id="selHeader">
+          <h1>Select your plan</h1>
+          <h3>You have the option of monthly or yearly billing</h3>
+        </header>
+        <div id="selMaindiv">
+          <div id="selMaindivinner">
+            <label for="input1" id="label1">
+              <div id="plan1" class="plans">
+                <div id="plan1Icon" class="planIcon"></div>
+                <div id="planTextDiv">
+                  <h2>Arcade</h2>
+                  <h4 id="planrate">$9/mo</h4>
+                  <p id="yearlyNote" style="visibility: hidden">
+                    2 months free
+                  </p>
+                </div>
+              </div>
+            </label>
+            <input
+              type="checkbox"
+              id="input1"
+              class="planBox"
+              planChoosen="Arcade"
+              style="visibility: hidden"
+              checked
+            />
+            <label for="input2" id="label2">
+              <div id="plan2" class="plans">
+                <div id="plan2Icon" class="planIcon"></div>
+                <div id="planTextDiv">
+                  <h2>Advanced</h2>
+                  <h4 id="planrate">$12/mo</h4>
+                  <p id="yearlyNote" style="visibility: hidden">
+                    2 months free
+                  </p>
+                </div>
+              </div>
+            </label>
+            <input
+              type="checkbox"
+              id="input2"
+              class="planBox"
+              planChoosen="Advanced"
+              style="visibility: hidden"
+            />
+            <label for="input3" id="label3">
+              <div id="plan3" class="plans">
+                <div id="plan3Icon" class="planIcon"></div>
+                <div id="planTextDiv">
+                  <h2>Pro</h2>
+                  <h4 id="planrate">$15/mo</h4>
+                  <p id="yearlyNote" style="visibility: hidden">
+                    2 months free
+                  </p>
+                </div>
+              </div>
+            </label>
+            <input
+              type="checkbox"
+              id="input3"
+              class="planBox"
+              planChoosen="Pro"
+              style="visibility: hidden"
+            />
+          </div>
+          <div id="Maintoogle">
+            <div id="SetOfToogleButton">
+              <div id="lableOne"><label for="monthly">Monthly</label></div>
+              <div id="overallToogle">
+                <div id="toogle">
+                  <label for="monthly" id="forMonthly">
+                    <div id="monR"></div>
+                  </label>
+                  <label for="yearly" id="forYearly">
+                    <div id="yearR"></div>
+                  </label>
+                </div>
+                <input
+                  type="radio"
+                  id="monthly"
+                  class="inputMonthly"
+                  name="too"
+                  style="visibility: hidden"
+                  checked
+                />
+                <input
+                  type="radio"
+                  id="yearly"
+                  class="inputYearly"
+                  name="too"
+                  style="visibility: hidden"
+                />
+              </div>
+              <div id="lableTwo"><label for="yearly">Yearly</label></div>
+            </div>
+          </div>
+        </div>
+        <footer id="selfooter">
+          <div id="footercon">
+            <h2
+              onclick="nextButtonNav.call(this)"
+              class="goback"
+              from="selectplan"
+              to="login"
+              onNav="nav1"
+            >
+              Go Back
+            </h2>
+            <button
+              id="nextButton"
+              class="selectPlanButton nxtbtn"
+              from="selectplan"
+              to="addon"
+              onNav="nav3"
+              onclick="nextButtonNav.call(this)"
+            >
+              Next Step
+            </button>
+          </div>
+        </footer>
+      </div>
+    </template>
+    <!-- Pick Addon -->
+    <template id="pickaddons">
+      <div id="addonsDiv">
+        <header id="addonheader">
+          <h1>Pick add-ons</h1>
+          <h3>Add-ons enhance your gaming experience</h3>
+        </header>
+        <div id="addonmain">
+          <div id="addoptns">
+            <div id="optn1" class="addonoptns">
+              <div id="optnInner1">
+                <input type="checkbox" id="addon" planchoosen="onlineService" />
+                <div>
+                  <h3>Online service</h3>
+                  <h4>Access to multiplayer games</h4>
+                </div>
+              </div>
+              <div id="optnInner2">
+                <h3>+$1/mo</h3>
+              </div>
+            </div>
+            <div id="optn2" class="addonoptns">
+              <div id="optnInner1">
+                <input type="checkbox" id="addon" planchoosen="largeStorage" />
+                <div>
+                  <h3>Large storage</h3>
+                  <h4>Extra 1tb of cloud sava</h4>
+                </div>
+              </div>
+              <div id="optnInner2">
+                <h3>+$2/mo</h3>
+              </div>
+            </div>
+            <div id="optn3" class="addonoptns">
+              <div id="optnInner1">
+                <input type="checkbox" id="addon" planchoosen="custProfile" />
+                <div>
+                  <h3>Customizable Profile</h3>
+                  <h4>Custom theme on your profile</h4>
+                </div>
+              </div>
+              <div id="optnInner2">
+                <h3>+$3/mo</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer id="addonfooter">
+          <div id="footerContentBox">
+            <h2
+              onclick="nextButtonNav.call(this)"
+              class="goback"
+              from="addon"
+              to="selectplan"
+              onNav="nav2"
+            >
+              Go Back
+            </h2>
+            <button
+              id="nextButton"
+              class="addonbutton nxtbtn"
+              from="addon"
+              to="finishup"
+              onNav="nav4"
+              onclick="nextButtonNav.call(this)"
+            >
+              Next Step
+            </button>
+          </div>
+        </footer>
+      </div>
+    </template>
+    <template id="finishup">
+      <div id="finishupdiv">
+        <header id="finishupheader">
+          <h1>Finishing up</h1>
+          <h3>Double-check everything looks OK before confirming.</h3>
+        </header>
+        <div id="finishMain">
+          <div id="plantakenDiv"></div>
+          <div id="addontakenDiv"></div>
+        </div>
+        <div id="totaldiv"></div>
+        <footer id="selfooter">
+          <div id="footercon">
+            <h2
+              onclick="nextButtonNav.call(this)"
+              class="goback"
+              from="finishUp"
+              to="addon"
+              onNav="nav3"
+            >
+              Go Back
+            </h2>
+            <button
+              id="nextButton"
+              class="selectPlanButton nxtbtn"
+              from="finishup"
+              to="final"
+              onNav="nav4"
+              onclick="nextButtonNav.call(this)"
+            >
+              Confirm
+            </button>
+          </div>
+        </footer>
+      </div>
+    </template>
+    <template id="final">
+      <div id="finalDiv">
+        <div id="finalImg"></div>
+        <h1 id="finalHeading">Thank you!</h1>
+        <p id="finalp">
+          Thanks for confirming your subscription!We hope you have fun using our
+          platform.If you ever need support,please feel free to email us at
+          support@loremgaming.com.
+        </p>
+      </div>
+    </template>
+  </body>
+  <script defer src="./js/index.js"></script>
+</html>
